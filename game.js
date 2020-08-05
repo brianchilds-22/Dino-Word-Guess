@@ -79,6 +79,10 @@ console.log(blanksAndSuccesses);
 function roundComplete() {
     console.log("Win Count: " + winCount + " | Loss Count " + lossCount + " | Guesses Left " + guessesLeft);
 
+    document.getElementById("numGuesses").innerHTML = guessesLeft;
+    document.getElementById("wordToGuess").innerHTML = blanksAndSuccesses.join(" ");
+    document.getElementById("wrongGuesses").innerHTML = wrongLetters.join(" ");
+
 
 // check if player won
     if (lettersinWord.toString() == blanksAndSuccesses.toString()) {
